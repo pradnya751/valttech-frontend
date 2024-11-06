@@ -128,3 +128,213 @@
 }
 
 /**====== Authentication css end ======**/
+/**====== Landing Page css start ======**/
+
+.top-bar {
+  background-color: #2d7555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+
+// Main navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0b3d3a;
+
+  // Logo styling
+  .logo {
+    h1 {
+      color: #fff;
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+
+  // Navigation links styling
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 15px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+
+        &:hover {
+          color: #4CAF50;
+        }
+      }
+    }
+  }
+
+  // Authentication buttons (Sign In & Sign Up)
+  .auth-buttons {
+    .sign-in,
+    .sign-up {
+      color: #fff;
+      background: none;
+      border: 1px solid #fff;
+      padding: 5px 15px;
+      margin-left: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #4CAF50;
+      }
+    }
+
+    .sign-up {
+      background-color: #4CAF50;
+      border: none;
+
+      &:hover {
+        background-color: #3b8e3b;
+      }
+    }
+  }
+}
+/**====== Landing Page css end ======**/
+
+/**====== Landing Page  foter css start ======**/
+// Footer content container
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0b3d3a;
+  color: #fff;
+  padding: 40px 0;
+
+  .footer-section {
+    flex: 1;
+    padding: 0 20px;
+
+    h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 8px;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 15px;
+
+          &:hover {
+            color: #4CAF50;
+          }
+        }
+      }
+    }
+
+    // Newsletter styling
+    &.newsletter {
+      input[type="email"] {
+        width: 80%;
+        padding: 8px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #3b8e3b;
+        }
+      }
+    }
+  }
+}
+
+// Footer bottom section with social media and copyright
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d7555;
+  padding: 10px 20px;
+  color: #fff;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .social-icons {
+    display: flex;
+
+    a {
+      color: #fff;
+      margin-right: 10px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #4CAF50;
+      }
+    }
+  }
+}
+.app-container {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content grows to push the footer to the bottom */
+.main-content {
+  flex-grow: 1;
+}
+
+/* Style for the footer */
+footer {
+  background-color: #0b3d3a;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Optional: Header styles */
+header {
+  background-color: #2d7555;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/**====== Landing Page footer css end ======**/
+
