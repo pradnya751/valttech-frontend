@@ -1,6 +1,28 @@
 /**  =====================
       Authentication css start
 ==========================  **/
+$primary-color:#0b3d3a;
+$white:#fff;
+$bg-success:#9ACD32;
+$sec-title:#18191C;
+@mixin font-fam($fw, $color,$fs){
+  font-weight: $fw;
+  color:$color;
+  font-size: $fs;
+}
+.btn-success{
+  background: $bg-success !important;
+  border: 1px solid $bg-success !important;
+}
+.bn-info{
+  background: #87CEEB !important;
+  border: 1px solid #87CEEB !important;
+}
+.bg-danger-subtle{
+  background: #FCEEEE !important;
+  color: #E05151 !important;
+}
+
 .auth-wrapper {
   position: relative;
   display: flex;
@@ -33,7 +55,7 @@
     margin: 8px 0;
 
     span {
-      background: #fff;
+      background: $white;
       position: relative;
       padding: 0 10px;
       z-index: 5;
@@ -143,6 +165,12 @@
 }
 
 // Main navbar
+.banner {
+  position: relative;
+  color: $white;
+  text-align: center;
+  // background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent overlay */
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -212,23 +240,31 @@
 }
 /**====== Landing Page css end ======**/
 
-/**====== Landing Page  foter css start ======**/
-// Footer content container
+/**====== Landing Page footer css start ======**/
+footer {
+  background-color: #000;
+  color: $white;
+  padding: 20px 30px;
+  // text-align: center;
+}
 .footer-content {
   display: flex;
-  justify-content: space-around;
-  background-color: #0b3d3a;
-  color: #fff;
+  color: $white;
   padding: 40px 0;
 
   .footer-section {
     flex: 1;
     padding: 0 20px;
+    p{
+      @include font-fam(600,$white ,16px )
+
+    }
 
     h3 {
       margin-bottom: 15px;
-      font-size: 18px;
-      color: #fff;
+      font-size: 20px;
+      color: $white;
+      font-weight: 600;
     }
 
     ul {
@@ -239,9 +275,9 @@
         margin-bottom: 8px;
 
         a {
-          color: #fff;
+          color: $white;
           text-decoration: none;
-          font-size: 15px;
+          font-size: 14px;
 
           &:hover {
             color: #4CAF50;
@@ -249,29 +285,36 @@
         }
       }
     }
-
-    // Newsletter styling
-    &.newsletter {
-      input[type="email"] {
-        width: 80%;
-        padding: 8px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 4px;
-      }
-
-      button {
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: #3b8e3b;
+    .social-icons{
+      border: 1px solid $white;
+      padding: 5px 10px;
+      cursor: pointer;
+      &:hover{
+        background: $white;
+        border: 1px solid #000;
+        i{
+          color: #000;
         }
+      }
+      i{
+        color: $white;
+        font-size: 16px;
+        padding-top: 4px;
+      }
+    }
+    .input{
+      input[type="email"] {
+        border: 1px solid #FFFFFF99;
+        background: #000;
+        color: #FFFFFF99;
+        border-radius: 12px;
+      }
+    }
+    .button{
+      button{
+        background: $bg-success;
+        border-radius: 12px;
+        border: 1px solid $bg-success;
       }
     }
   }
@@ -282,9 +325,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2d7555;
   padding: 10px 20px;
-  color: #fff;
+  color: #FFFFFF80;
+  font-size: small;
 
   p {
     margin: 0;
@@ -295,10 +338,10 @@
     display: flex;
 
     a {
-      color: #fff;
+      color: $white;
       margin-right: 10px;
       font-size: 16px;
-      text-decoration: none;
+      text-decoration: underline;
       transition: color 0.3s ease;
 
       &:hover {
@@ -307,6 +350,11 @@
     }
   }
 }
+
+
+
+/**====== Landing Page footer css end ======**/
+
 .app-container {
   height: 100%;
   margin: 0;
@@ -314,27 +362,268 @@
   flex-direction: column;
   min-height: 100vh;
 }
-
-/* Main content grows to push the footer to the bottom */
 .main-content {
   flex-grow: 1;
 }
-
-/* Style for the footer */
-footer {
-  background-color: #0b3d3a;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
 /* Optional: Header styles */
 header {
-  background-color: #2d7555;
+ background-image: url('https://i.ibb.co/P4dS8cv/Hero.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
+ object-fit: cover;
+ aspect-ratio: 16/7;
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  .navbar-brand {
+    background: none;
+    font-size: medium;
+  }
+  .nav-link{
+    font-size: medium;
+  }
+}
+.bg-color{
+  background-color: #9ACD32 !important;
+  span{
+    @include font-fam(500,$white ,18px )
+  }
+}
+.bg-suc{
+background-color: $bg-success;
+font-size: medium;
+}
+.back{
+  @include font-fam(500,$white ,16px )
 }
 
-/**====== Landing Page footer css end ======**/
+
+// popular category Section Css start
+.section-title{
+  @include font-fam(500, $sec-title, 30px )
+}
+.view-all{
+  background: $white;
+  border: 1px solid #EAF5F3;
+  border-radius: 3px;
+  color: $bg-success;
+  i{
+    color: $bg-success;
+    padding-left: 5px;
+  }
+}
+.wrapper{
+  &:hover{
+    box-shadow: 0px 12px 48px 0px #002C6D1A;
+    background: #FFFFFF;
+    border-radius: 12px;
+    .title{
+      p{
+        @include font-fam(500,#87CEEB ,16px )
+      }
+      
+    }
+    .img-container{
+      background: #87CEEB;
+      i{
+        color: $white;
+       
+      }
+    }
+  }
+  .img-container{
+    background: #F4FCFF;
+    border-radius: 8px;
+    padding: 10px 18px;
+    i{
+      font-size: 23px;
+      color: #87CEEB;
+      margin-top: .45rem;
+    }
+  }
+  .title{
+    p{
+      @include font-fam(500,$sec-title ,16px )
+    }
+    span{
+      @include font-fam(400,#5E6670 ,13px )
+    }
+  }
+}
+
+
+// Job Section Css end 
+
+// Recents Jobs Section css start
+.job-wrapper{
+  .card-wrapper{
+    .card{
+      box-shadow: 0px 3px 8px 0px #30968914;
+      .card-body{
+        .card-title{
+          .time{
+            .badge{
+              background: #3096891A;
+              
+              @include font-fam(400,#0E00CC , 14px)
+            }
+          }
+          i{
+            color: #6C757D;
+          }
+        }
+        .title{
+          h3{
+            @include font-fam(600,#000 ,20px )
+          }
+          h4{
+            @include font-fam(400,#000 ,14px ) 
+          }
+        }
+        .footer{
+          i{
+          color: #87CEEB;
+          font-size: 18px;
+          }
+          span{
+            @include font-fam(400,#6C757D ,14px ) 
+            
+          }
+        }
+        .btn >button{
+          background: $bg-success;
+          border: $bg-success;
+        }
+      }
+    }
+  }
+}
+.active-job{
+  border-bottom: 2px solid #D9D9D9  ;
+  p{
+    margin-bottom: -2px;
+    padding-bottom: 10px;
+    @include font-fam(500,#000 ,21px );
+    cursor: pointer;
+  }
+}
+.active-tab{
+  @include font-fam(500,$bg-success !important,21px );
+  border-bottom: 2px solid $bg-success;
+  
+}
+// Recent Job section css end
+
+// top companies css start
+.top-companies{
+  .card{
+    box-shadow: 0px 2px 18px 0px #18191C08;
+    .img{
+      background: #EA4C89;
+      border-radius: 4px;
+      padding: 14px 15px 15px 15px;
+    }
+    .t{
+      @include font-fam(500,#191F33 ,16px )
+    }
+    .location{
+      span{
+        @include font-fam(400,#767F8C , 13px)
+      }
+    }
+   
+  }
+}
+
+
+// top companes css end
+.testimonial-carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  // max-width: 800px;
+  height: 40vh ;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 4rem;
+  margin-right: 4rem;
+
+  .testimonial-card {
+    text-align: center;
+
+    .testimonial-content {
+      
+      .testimonial-image {
+        width: 100%;            
+        aspect-ratio: 16/9;         
+        height: auto; 
+        border-radius: 40px;
+        margin-right: 20px;
+      }
+.details{
+  h4{
+    @include font-fam(700,#0E00CC ,24px )
+  }
+  span{
+    @include font-fam(400,#000 ,18px )
+  }
+}
+      .testimonial-text {
+        h4 {
+          color: #0044cc;
+        }
+
+        p {
+          font-style: italic;
+          color: #555;
+        }
+
+        blockquote {
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #000;
+          position: relative;
+          padding-left: 15px;
+
+          &::before {
+            content: "“";
+            font-size: 2rem;
+            position: absolute;
+            left: 0;
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+
+  .carousel-control {
+    background-color: #9ACD32;
+    color: #fff;
+    box-shadow: 4px 2px 7px 1px #00000040;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &.prev {
+      position: absolute;
+      left: -70px;
+    }
+
+    &.next {
+      position: absolute;
+      right: -70px;
+    }
+  }
+}
 

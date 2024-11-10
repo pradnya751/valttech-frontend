@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 // styles
 import './index.scss';
-
+import 'boxicons/css/boxicons.min.css';
 // projct import
 import App from './App';
 import reportWebVitals from './reportWebVitals';

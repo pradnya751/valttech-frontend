@@ -1,7 +1,12 @@
 // eslint-disable-next-line
 @import 'assets/scss/style.scss';
 @import 'assets/scss/settings/custom-variables';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
+body{
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+}
 .pcoded-navbar {
   &.mob-open ~ .pcoded-header:before,
   &.navbar-collapsed:hover ~ .pcoded-header:before {
