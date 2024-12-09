@@ -30,4 +30,4 @@ function RecentJobE() {
   )
 }
 
-export default RecentJobE
+export default RecentJobE  

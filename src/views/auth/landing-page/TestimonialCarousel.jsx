@@ -37,10 +37,10 @@ const TestimonialCarousel = () => {
              <p>Marketing Specialist</p>
              </div>
               </div>
-              <div className="testimonial-text col-12 col-md-7 col-lg-7 d-flex justify-content-center align-items-center">
-                <blockquote>
+              <div className="testimonial-text col-12 col-md-7 col-lg-7 d-flex  align-items-center">
+                <p>
                 "I had been struggling to find a job that truly matched my skills and interests. After creating my profile on the HireFast platform, I was amazed by the personalized job recommendations I received. The AI-driven insights helped me refine my application, and the interview preparation resources were invaluable. Within weeks, I landed an amazing role at a company that perfectly aligned with my career goals. I can't thank HireFast enough for making my job search so efficient and successful!"
-                </blockquote>
+                </p>
               </div>
             </div>
           </div>
@@ -61,10 +61,10 @@ const TestimonialCarousel = () => {
              <p>Marketing Specialist</p>
              </div>
               </div>
-              <div className="testimonial-text col-12 col-md-7 col-lg-7 d-flex justify-content-center align-items-center">
-                <blockquote>
+              <div className="testimonial-text col-12 col-md-7 col-lg-7 d-flex  align-items-center">
+              <p>
                 "I had been struggling to find a job that truly matched my skills and interests. After creating my profile on the HireFast platform, I was amazed by the personalized job recommendations I received. The AI-driven insights helped me refine my application, and the interview preparation resources were invaluable. Within weeks, I landed an amazing role at a company that perfectly aligned with my career goals. I can't thank HireFast enough for making my job search so efficient and successful!"
-                </blockquote>
+                </p>
               </div>
             </div>
           </div>

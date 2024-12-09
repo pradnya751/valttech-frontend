@@ -7,6 +7,14 @@ import RecentJobE from './RecentJobE';
 import { useState } from 'react';
 import TopCompanies from './TopCompanies';
 import TestimonialCarousel from './TestimonialCarousel';
+import FeaturedEmployer from './FeaturedEmployer';
+import Candidateshowcase from './Candidateshowcase';
+//  import ResourcesAndGuides from './ResourcesAndGuides';
+import WhyWorkWithUs from './WhyWorkWithUs';
+import WebinarAndNews from './WebinarAndNews';
+import KnowMore from './KnowMore';
+import FAQ from './FAQ';
+
 function index() {
   const [activeTab, setActiveTab] = useState('Jobs');
   const handleTabClick = (tab) => {
@@ -17,6 +25,9 @@ function index() {
       <Header />
       <main className="main-content mx-5">
         <Category />
+      <FeaturedEmployer />  
+      <Candidateshowcase />
+      
         <div className="jobs">
           <div className="active-job d-flex gap-5 my-5">
             <p className={activeTab === 'Jobs' ? 'active-tab' : ''} onClick={() => handleTabClick('Jobs')}>
@@ -31,7 +42,7 @@ function index() {
           </div>
           <div className="job-wrapper">
             <div className="main-title">
-              <h3 className="mb-4">Recent Jobs Availavle</h3>
+              <h3 className="mb-4">Recent Jobs Available</h3>
               <div className="card-wrapper">
                 <div className="row">
                   <div className="col-12 col-lg-9 col-md-9">
@@ -52,15 +63,21 @@ function index() {
           </div>
         </div>
         <div className="my-5">
-          <TopCompanies />
+        {/* <ResourcesAndGuides />  */}
+       
+        <KnowMore />
+        <TopCompanies />
         </div>
+        {/* <WebinarAndNews /> */}
         <div className="my-5">
           <div className="heading my-5">
             <h3 className='text-center'>Success Stories and User Testimonials</h3>
           </div>
-        <TestimonialCarousel />
+          <TestimonialCarousel />
         </div>
       </main>
+      <FAQ />
+      <WhyWorkWithUs />
       <Footer />
     </div>
   );

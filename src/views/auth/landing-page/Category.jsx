@@ -74,8 +74,8 @@ function Category() {
       
     ))}
     </div>
-      
     </div>
+    
   );
 }
 

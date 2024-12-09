@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Logo from '../../../assets/images/auth/landing-page/Logo.png';
+
 function RecentJobs() {
   const data = [
     {
@@ -64,11 +65,12 @@ function RecentJobs() {
       location: 'New-York, USA'
     }
   ];
+
   return (
     <div className="job-wrapper">
       <div className="row">
         {data?.map((item) => (
-          <div className="col-12">
+          <div className="col-12" key={item.id}>
             <Card className="rounded-4 mb-3">
               <Card.Body>
                 <Card.Title>
@@ -77,7 +79,7 @@ function RecentJobs() {
                       <span className="badge py-2">{item.time}</span>
                     </div>
                     <div className="bookmark">
-                      <i class="bx bx-bookmark-plus"></i>
+                      <i className="bx bx-bookmark-plus"></i>
                     </div>
                   </div>
                 </Card.Title>
@@ -93,19 +95,19 @@ function RecentJobs() {
                 <div className="d-flex justify-content-between align-items-center flex-wrap">
                   <div className="footer d-flex gap-3 align-items-center flex-wrap">
                     <div className="d-flex align-items-center flex-wrap">
-                      <i class="bx bx-briefcase"></i>
+                      <i className="bx bx-briefcase"></i>
                       <span className="px-2">{item.business}</span>
                     </div>
                     <div className="d-flex align-items-center flex-wrap">
-                      <i class="bx bx-time-five"></i>
+                      <i className="bx bx-time-five"></i>
                       <span className="px-2">{item.jobType}</span>
                     </div>
                     <div className="d-flex align-items-center flex-wrap">
-                      <i class="bx bx-wallet-alt"></i>
+                      <i className="bx bx-wallet-alt"></i>
                       <span className="px-2">{item.salary}</span>
                     </div>
                     <div className="d-flex align-items-center flex-wrap">
-                      <i class="bx bxs-map"></i>
+                      <i className="bx bxs-map"></i>
                       <span className="px-2">{item.location}</span>
                     </div>
                   </div>
@@ -117,6 +119,34 @@ function RecentJobs() {
             </Card>
           </div>
         ))}
+      </div>
+      {/* Static Pagination */}
+      <div className="pagination-wrapper text-center mt-4">
+        <nav>
+          <ul className="pagination justify-content-center">
+            <li className="page-item">
+              <button className="page-link" disabled>&lt;</button>
+            </li>
+            <li className="page-item">
+              <button className="page-link">1</button>
+            </li>
+            <li className="page-item">
+              <button className="page-link">2</button>
+            </li>
+            <li className="page-item">
+              <button className="page-link">3</button>
+            </li>
+            <li className="page-item">
+              <button className="page-link">4</button>
+            </li>
+            <li className="page-item">
+              <button className="page-link">5</button>
+            </li>
+            <li className="page-item">
+              <button className="page-link">&gt;</button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   );

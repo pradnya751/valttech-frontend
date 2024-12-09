@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="row">
            
             <div className="col-12 col-md-3 col-lg-3">
-              <h3><i class='bx bx-briefcase text-white pe-2' ></i>Job </h3>
+              <h3><i class='bx bx-briefcase text-white pe-2' ></i>Logo </h3>
              <div className="d-flex flex-column justify-content-between">
              <p className='text-white mt-4'>
               Quis enim pellentesque viverra tellus eget malesuada facilisis. Congue nibh vivamus aliquet nunc mauris dui nullam et.
@@ -76,7 +76,7 @@ const Footer = () => {
                 <input type="email" className='px-3 py-2 w-100' placeholder='Email Address' />
               </div>
               <div className="button my-3">
-                <button className='btn btn-success w-100 btn-hover'>Subscribe now</button>
+                <button className='btn btn-successs w-100 btn-hover'>Subscribe now</button>
               </div>
             </div>
           </div>

@@ -48,7 +48,7 @@ function TopCompanies() {
   ];
   return (
     <div className="top-companies">
-      <h3 className="text-center">Top Hiring Companies</h3>
+      <h3 className="text-right">Top Hiring Companies</h3>
 
       <div className="row mt-5">
      {
@@ -67,13 +67,13 @@ function TopCompanies() {
                        <span className="badge bg-danger-subtle text-danger rounded-5 px-3 py-1">Featured</span>
                        </div>
                         <div className="location mt-2">
-                          <span><i class='bx bx-map me-2'></i></span>
+                          <span><i class='bx bx-map me-1'></i></span>
                           <span>{item.address}</span>
                         </div>
                     </div>
                 </div>
                </div>
-              <Button variant="info" className="mt-3 w-100">
+              <Button variant="light" className="mt-3 w-100">
                 {item.openPosition}
               </Button>
             </Card.Body>
